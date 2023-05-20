@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { getInitialPokemonData } from './app/reducers/getInitialPokemonData';
+import { getPokemonData } from './app/reducers/getPokemonData';
 
 function App() {
   const { allPokemon } = useAppSelector(({ pokemon }) => pokemon);
@@ -13,11 +14,11 @@ function App() {
       const clonedPokemons = [...allPokemon];
       const randomPokemonsId = clonedPokemons
         .sort(() => Math.random() - Math.random())
-        .splice(0, 20);
-      console.log(randomPokemonsId);
-      
+        .splice(0, 5);
+      //console.log(randomPokemonsId);
+      dispatch(getPokemonData(randomPokemonsId))
     }
-  }, [allPokemon]);
+  }, [allPokemon,dispatch]);
 
   return <>Hello word 🔆</>;
 }
