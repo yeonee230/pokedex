@@ -1,5 +1,5 @@
-export interface AppTypeInitialState {}
-export interface PokemonTypeInitialState {
+export interface AppInitialStateType {}
+export interface PokemonInitialStateType {
   allPokemon: undefined | genericPokemonType[];
   randomPokemons :undefined| createdPokemonType[];
 }
@@ -14,7 +14,6 @@ export interface createdPokemonType {
   id: number;
   name: string;
   image: string;
-  // types: [{type:genericPokemonType}]
   types: pokemonTypeInterface[];
 }
 
