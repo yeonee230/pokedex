@@ -5,7 +5,7 @@ import { pokemonRout } from "../../utils/Constants";
 export const getInitialPokemonData = createAsyncThunk('pokemon/initialData',async () => {
     try {
         const {data} = await axios.get(pokemonRout)
-        console.log(data);
+        //console.log(data);
         
         return data.results;
     } catch (error) {
