@@ -1,3 +1,5 @@
+// api에서 초기 포켓몬 데이터 가져오기
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { pokemonRout } from "../../utils/Constants";
