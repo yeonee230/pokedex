@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { getInitialPokemonData } from './app/reducers/getInitialPokemonData';
 import { getPokemonData } from './app/reducers/getPokemonData';
+import Navbar from './components/Navbar';
 
 function App() {
   const { allPokemon } = useAppSelector(({ pokemon }) => pokemon);
@@ -20,7 +21,11 @@ function App() {
     }
   }, [allPokemon,dispatch]);
 
-  return <>Hello word 🔆</>;
+  return <>
+  <Navbar />
+  
+  
+  </>;
 }
 
 export default App;
